@@ -1,4 +1,4 @@
-#Tips for WordNet
+# Tips for WordNet
 1.要让SAP中Digraph为immutable，需用copy的constructor复制：
 ```java
 // constructor takes a G (not necessarily a DAG)
