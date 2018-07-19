@@ -3,9 +3,9 @@
 ```java
 // constructor takes a G (not necessarily a DAG) 
 public SAP(Digraph G) {
-if (G == null)
-throw new IllegalArgumentException();
-this.G = new Digraph(G);
+  if (G == null)
+    throw new IllegalArgumentException();
+  this.G = new Digraph(G);
 }
 ```
 
@@ -13,13 +13,13 @@ this.G = new Digraph(G);
 ```java
 // constructor takes the name of the two input files
 public WordNet(String synsets, String hypernyms) {
-if (synsets == null || hypernyms == null)
-throw new IllegalArgumentException("null synsets or hypernyms");
-parseSynsets(synsets);
-parseHypernyms(hypernyms);
-if (new DirectedCycle(G).hasCycle() || !judgeOneRoot()) //to ensure DAG and one root
-throw new IllegalArgumentException("not a rooted DAG");
-sap1 = new SAP(G); //create SAP in constructor to reduce time in multiple calls
+  if (synsets == null || hypernyms == null)
+    throw new IllegalArgumentException("null synsets or hypernyms");
+  parseSynsets(synsets);
+  parseHypernyms(hypernyms);
+  if (new DirectedCycle(G).hasCycle() || !judgeOneRoot()) //to ensure DAG and one root
+    throw new IllegalArgumentException("not a rooted DAG");
+  sap1 = new SAP(G); //create SAP in constructor to reduce time in multiple calls
 }
 ```
 
@@ -30,7 +30,7 @@ sap1 = new SAP(G); //create SAP in constructor to reduce time in multiple calls
 ```java
 // returns all WordNet nouns
 public Iterable<String> nouns() {
-return synMap.keySet(); //just use the keySet can same time
+  return synMap.keySet(); //just use the keySet can same time
 }
 ```
 
