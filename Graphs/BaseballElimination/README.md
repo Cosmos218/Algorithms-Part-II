@@ -1,4 +1,4 @@
-# Tips for SeamCarving
+# Tips for Baseball Elimination
 
 1.勿忘对于所有public函数的非法输入的处理
 
